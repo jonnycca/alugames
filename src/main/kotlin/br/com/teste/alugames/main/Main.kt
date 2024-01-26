@@ -2,6 +2,7 @@ package org.example.br.com.teste.alugames.main
 
 import br.com.teste.alugames.model.Gamer
 import br.com.teste.alugames.services.ConsumoApiService
+import br.com.teste.alugames.services.ConsumoArquivoService
 import org.example.br.com.teste.alugames.model.Jogo
 import transformarEmIdade
 import java.util.*
@@ -30,7 +31,7 @@ fun main() {
         val resultado = runCatching {
 
 
-            meuJogoMappead = Jogo(informacaoJogo.info.title, informacaoJogo.info.thumb, "")
+            meuJogoMappead = Jogo(informacaoJogo.info.title, informacaoJogo.info.thumb)
 
             println(meuJogoMappead)
         }

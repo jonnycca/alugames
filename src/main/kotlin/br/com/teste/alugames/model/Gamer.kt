@@ -1,6 +1,7 @@
 package br.com.teste.alugames.model
 
 import org.example.br.com.teste.alugames.model.Jogo
+import java.time.LocalDate
 import java.util.Scanner
 import kotlin.random.Random
 
@@ -16,7 +17,8 @@ data class Gamer(var nome: String, var email: String) {
     var idInterno: String? = null
         private set
 
-    val jogosBuscados = mutableListOf<Jogo?>();
+    val jogosBuscados = mutableListOf<Jogo?>()
+    val jogosAlugados = mutableListOf<Aluguel>()
 
     constructor(nome: String, email: String, dataNascimento: String, usuario: String)
             : this(nome, email) {
@@ -43,6 +45,18 @@ data class Gamer(var nome: String, var email: String) {
         }else{
             throw IllegalArgumentException("Email digitado invalido")
         }
+    }
+
+    fun alugaJogo(jogo:Jogo, periodo: Periodo):Aluguel{
+        val aluguel = Aluguel(this, jogo, periodo)
+        jogosAlugados.add(aluguel)
+        return aluguel
+    }
+
+    fun getJogosPorMes(mes:Int):List<Jogo>{
+       return jogosAlugados.filter { aluguel ->
+           aluguel.periodo.dataInicial.month.value == mes }.map { aluguel -> aluguel.jogo }
+
     }
 
     companion object{
