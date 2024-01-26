@@ -1,4 +1,4 @@
 
-skotlin:S6532"OReplace this if expression with require(!(nome.isBlank())) { "Nome invalido" }.(ôõ»®øÿÿÿÿ8°Õ¥¿Ô1
+skotlin:S6532 "OReplace this if expression with require(!(nome.isBlank())) { "Nome invalido" }.(ôõ»®øÿÿÿÿ8°Õ¥¿Ô1
 9kotlin:S1128"Remove this unused import.(¿»°•8±Õ¥¿Ô1
-ekotlin:S6510H"AMove "return" statements from all branches before "if" statement.(½ÇÂ°ùÿÿÿÿ8³Õ¥¿Ô1
+ekotlin:S6510I"AMove "return" statements from all branches before "if" statement.(½ÇÂ°ùÿÿÿÿ8³Õ¥¿Ô1

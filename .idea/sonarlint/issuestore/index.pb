@@ -31,3 +31,9 @@ w
 Gsrc/main/kotlin/br/com/teste/alugames/services/ConsumoArquivoService.kt,a\7\a7c802a1bd28b1ff5cc627c8ac2e481391254850
 f
 6src/main/kotlin/br/com/teste/alugames/model/Periodo.kt,9\b\9b25e8402fde62e3a2b220b2135a9fe5f2994037
+j
+:src/main/kotlin/br/com/teste/alugames/model/PlanoAvulso.kt,1\3\133c30e96d9615ab0e828fd489b8693080618ec4
+n
+>src/main/kotlin/br/com/teste/alugames/model/PlanoAssinatura.kt,0\f\0f74d54e6710f447157eb501c559fe5b193cf218
+d
+4src/main/kotlin/br/com/teste/alugames/model/Plano.kt,5\e\5e9f0107d93ac116a0fd218c9b34be4ef105f4d0

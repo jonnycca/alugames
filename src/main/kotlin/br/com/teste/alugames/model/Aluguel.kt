@@ -7,7 +7,7 @@ data class Aluguel(
     val jogo: Jogo,
     val periodo: Periodo){
 
-    var valorDoAlguel = jogo.preco * periodo.emDias
+    private var valorDoAlguel = gamer.plano.obterValor(this)
     override fun toString(): String {
         return "Aluguel do ${jogo.titulo} por ${gamer.nome} pelo valor $valorDoAlguel"
     }
