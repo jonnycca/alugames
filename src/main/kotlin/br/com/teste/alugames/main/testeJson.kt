@@ -14,14 +14,14 @@ fun main(){
     val gamer2 = listaGamers[1]
     val jogo = listaJogos[0]
     val jogo2 = listaJogos[1]
-    val jogo3 = listaJogoJson.get(10)
-    val jogo4 = listaJogoJson.get(13)
-    val jogo5 = listaJogoJson.get(2)
-    val jogo6 = listaJogoJson.get(5)
-    val jogo7 = listaJogoJson.get(4)
-    val jogo8 = listaJogoJson.get(6)
-    val jogo9 = listaJogoJson.get(7)
-    val jogo10 = listaJogoJson.get(18)
+    val jogo3 = listaJogos[10]
+    val jogo4 = listaJogos[13]
+    val jogo5 = listaJogos[2]
+    val jogo6 = listaJogos[5]
+    val jogo7 = listaJogos[4]
+    val jogo8 = listaJogos[6]
+    val jogo9 = listaJogos[7]
+    val jogo10 = listaJogos[18]
 
 
     val periodo = Periodo(LocalDate.now(), LocalDate.now().plusDays(3))
