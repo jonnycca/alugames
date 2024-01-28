@@ -37,3 +37,5 @@ n
 >src/main/kotlin/br/com/teste/alugames/model/PlanoAssinatura.kt,0\f\0f74d54e6710f447157eb501c559fe5b193cf218
 d
 4src/main/kotlin/br/com/teste/alugames/model/Plano.kt,5\e\5e9f0107d93ac116a0fd218c9b34be4ef105f4d0
+k
+;src/main/kotlin/br/com/teste/alugames/model/Recomendavel.kt,4\4\44a5ee5acbcf550e0ebfd3d5d3d9d541a74766ce
