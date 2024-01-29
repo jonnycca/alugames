@@ -13,16 +13,18 @@ data class Jogo(
     var descricao: String? = null
 
     var preco = BigDecimal(0.0)
+    var id = 0
 
     private val listaNotas = mutableListOf<Int>()
     override val media: Double
         get() = listaNotas.average().formatoComDuasCasasDecimais()
 
 
-    constructor(titulo: String, capa: String, preco: BigDecimal, descricao: String) :
+    constructor(titulo: String, capa: String, preco: BigDecimal, descricao: String, id:Int = 0) :
             this(titulo, capa) {
         this.preco = preco
         this.descricao = descricao
+        this.id = id
     }
 
     override fun recomendar(nota: Int) {
@@ -35,6 +37,7 @@ data class Jogo(
 
     override fun toString(): String {
         return "Jogo(titulo='$titulo', capa='$capa', descricao='$descricao', preco= $preco," +
-                "Reputacao= $media)"
+                "Reputacao= $media'," +
+                "id= $id)"
     }
 }
