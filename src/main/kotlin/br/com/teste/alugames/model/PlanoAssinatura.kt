@@ -1,24 +1,26 @@
 package br.com.teste.alugames.model
 
 import formatoComDuasCasasDecimais
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 class PlanoAssinatura(
     tipo:String,
     val mensalidade: Double,
     val jogoInclusidos: Int,
-    val percentualDescontoReputacao: Double):Plano(tipo){
+    val percentualDescontoReputacao: BigDecimal):Plano(tipo){
 
-    override fun obterValor(aluguel: Aluguel): Double {
+    override fun obterValor(aluguel: Aluguel): BigDecimal {
         val totalJogosMes = aluguel.gamer.getJogosPorMes(aluguel.periodo.dataInicial.monthValue)
 
         return if(totalJogosMes.size+1 <= jogoInclusidos){
-            0.0
+            BigDecimal("0.0")
         }else{
             var valorOriginal = super.obterValor(aluguel)
             if (aluguel.gamer.media > 8){
-                valorOriginal -= valorOriginal * percentualDescontoReputacao
+                valorOriginal -= valorOriginal.multiply(percentualDescontoReputacao)
             }
-            valorOriginal.formatoComDuasCasasDecimais()
+            valorOriginal.setScale(2, RoundingMode.HALF_EVEN)
         }
     }
 }
