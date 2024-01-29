@@ -1,5 +1,6 @@
 package br.com.teste.alugames.model
 
+import formatoComDuasCasasDecimais
 import org.example.br.com.teste.alugames.model.Jogo
 import java.util.*
 import kotlin.random.Random
@@ -23,7 +24,7 @@ data class Gamer(var nome: String, var email: String) : Recomendavel {
     val jogosRecomendados = mutableListOf<Jogo>()
 
     override val media: Double
-        get() = listaNotas.average()
+        get() = listaNotas.average().formatoComDuasCasasDecimais()
 
     override fun recomendar(nota: Int) {
         if (nota > 10 || nota < 1) {

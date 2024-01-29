@@ -39,3 +39,7 @@ d
 4src/main/kotlin/br/com/teste/alugames/model/Plano.kt,5\e\5e9f0107d93ac116a0fd218c9b34be4ef105f4d0
 k
 ;src/main/kotlin/br/com/teste/alugames/model/Recomendavel.kt,4\4\44a5ee5acbcf550e0ebfd3d5d3d9d541a74766ce
+F
+jogosRecomendados.json,1\1\11906c7c8b5c697694efb6578695bd203c9f3856
+s
+Csrc/main/kotlin/br/com/teste/alugames/utilitario/DoubleExtension.kt,d\1\d1a4fa39978e1a79b7c3481b30e89e50545ed0e5

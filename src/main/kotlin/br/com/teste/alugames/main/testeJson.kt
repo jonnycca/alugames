@@ -1,8 +1,11 @@
 package br.com.teste.alugames.main
 
+import br.com.teste.alugames.model.Gamer
 import br.com.teste.alugames.model.Periodo
 import br.com.teste.alugames.model.PlanoAssinatura
 import br.com.teste.alugames.services.ConsumoArquivoService
+import com.google.gson.GsonBuilder
+import java.io.File
 import java.time.LocalDate
 
 fun main(){
@@ -59,6 +62,16 @@ fun main(){
     gamer.recomendarJogo(jogo10, 6)
 
 
-    println("Jogos recomendados!")
-    println(gamer.jogosRecomendados)
+    val gson = GsonBuilder().excludeFieldsWithoutExposeAnnotation().create()
+    val serializacao = gson.toJson(gamer.jogosRecomendados)
+
+    println("Serializacao")
+    println(serializacao)
+
+    val arquivo = File("jogosRecomendados-${gamer.nome}.json")
+    arquivo.writeText(serializacao)
+    println(arquivo.absolutePath)
+
+//    println("Jogos recomendados!")
+//    println(gamer.jogosRecomendados)
 }
